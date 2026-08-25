@@ -449,12 +449,15 @@
       background:var(--surface);box-shadow:0 25px 80px rgba(0,0,0,.2)
     }
     .featured-image{
-      min-height:450px;position:relative;
+      min-height:450px;position:relative;overflow:hidden;
       background:
         linear-gradient(120deg,rgba(10,22,40,.12),rgba(10,22,40,.7)),
         radial-gradient(circle at 70% 30%,rgba(0,168,204,.35),transparent 25%),
         linear-gradient(135deg,#18372a,#08120f 65%);
       display:flex;align-items:flex-end;padding:30px
+    }
+    .featured-image img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover
     }
     .featured-image:before{
       content:"";position:absolute;inset:0;opacity:.25;
@@ -551,7 +554,7 @@
         <a href="#usina">Usina 75 kW</a>
         <a href="#diferenciais">Diferenciais</a>
         <a href="#faq">Dúvidas</a>
-        <a href="#blog">Blog</a>
+        <a href="blog.html">Blog</a>
       </nav>
 
       <a class="btn btn-primary" href="#contato" style="background-color: rgb(0, 168, 204); border-color: rgb(0, 168, 204);">Solicitar orçamento <span>↗</span></a>
@@ -885,6 +888,7 @@
     <section class="container">
       <article class="featured">
         <div class="featured-image">
+          <img src="assets/artigo-solar.png" alt="Engenheiros da Fótons instalando painéis solares fotovoltaicos">
           <span class="image-label">Artigo em destaque · Energia Solar</span>
         </div>
         <div class="featured-content">
@@ -898,7 +902,7 @@
           <div class="post-meta">
             <span>Fótons Energia Solar</span><span>·</span><span>6 min de leitura</span>
           </div>
-          <a class="read" href="#artigos">Ler artigo completo ↗</a>
+          <a class="read" href="blog.html">Ler artigo completo ↗</a>
         </div>
       </article>
     </section>
@@ -974,32 +978,32 @@
         </div>
 
         <div class="posts">
-          <article class="post" data-category="solar">
+          <a class="post" href="blog.html" data-category="solar" data-od-id="post-fotovoltaico">
             <div class="post-image solar"><span class="post-label">Energia Solar</span></div>
             <div class="post-content">
               <h3>Como funciona um sistema fotovoltaico?</h3>
               <p>Entenda, de forma simples, como a luz do sol é transformada em energia elétrica.</p>
               <div class="post-footer"><span class="date">Energia · 5 min</span><span class="arrow">↗</span></div>
             </div>
-          </article>
+          </a>
 
-          <article class="post" data-category="engineering">
+          <a class="post" href="blog.html" data-category="engineering" data-od-id="post-dimensionamento">
             <div class="post-image engineering"><span class="post-label">Engenharia</span></div>
             <div class="post-content">
               <h3>Por que o dimensionamento elétrico importa?</h3>
               <p>Uma visão prática sobre segurança, desempenho e confiabilidade em projetos elétricos.</p>
               <div class="post-footer"><span class="date">Engenharia · 7 min</span><span class="arrow">↗</span></div>
             </div>
-          </article>
+          </a>
 
-          <article class="post" data-category="economy">
+          <a class="post" href="blog.html" data-category="economy" data-od-id="post-investimento">
             <div class="post-image economy"><span class="post-label">Economia</span></div>
             <div class="post-content">
               <h3>Energia solar é investimento ou despesa?</h3>
               <p>O que analisar antes de comparar apenas o preço de instalação de um sistema.</p>
               <div class="post-footer"><span class="date">Economia · 6 min</span><span class="arrow">↗</span></div>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -1046,7 +1050,7 @@
           <a href="#solucoes">Soluções</a>
           <a href="#usina">Usina 75 kW</a>
           <a href="#diferenciais">Por que a Fótons?</a>
-          <a href="#blog">Blog</a>
+          <a href="blog.html">Blog</a>
         </div>
 
         <div class="footer-col">
@@ -1058,7 +1062,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Fótons Energia Solar. Todos os direitos reservados.</span>
+        <span>© 2026 Fótons Energia Solar · CNPJ 33.674.344/0001-35. Todos os direitos reservados.</span>
         <span>Engenharia elétrica · Energia solar</span>
       </div>
     </div>
